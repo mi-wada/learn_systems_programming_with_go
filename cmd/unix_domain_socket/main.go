@@ -22,7 +22,7 @@ func main() {
 }
 
 func server() {
-	listener, err := net.Listen("unix", "socketfile")
+	listener, err := net.Listen("unix", "test.socketfile")
 	if err != nil {
 		panic(err)
 	}
@@ -49,7 +49,7 @@ func server() {
 }
 
 func client() {
-	conn, err := net.Dial("unix", "socketfile")
+	conn, err := net.Dial("unix", "test.socketfile")
 	if err != nil {
 		panic(err)
 	}
